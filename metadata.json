@@ -1,0 +1,6 @@
+{
+  "name": "BrandPlay - Customizable Brand Game Platform",
+  "description": "No-code platform for brands and marketers to create, customize, preview, publish, and export interactive branded mini-games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

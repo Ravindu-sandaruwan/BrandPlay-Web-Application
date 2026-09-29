@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #090d16;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+html.light ::-webkit-scrollbar-track,
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb,
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+html.light ::-webkit-scrollbar-thumb:hover,
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Light mode global adaptivity */
+html.light,
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html.light body,
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html.light .bg-slate-950,
+html:not(.dark) .bg-slate-950 {
+  background-color: #f8fafc;
+}
+
+html.light .bg-slate-900,
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff;
+}
+
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/40,
+html.light .bg-slate-900\/30,
+html.light .bg-slate-900\/20,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900\/40,
+html:not(.dark) .bg-slate-900\/30,
+html:not(.dark) .bg-slate-900\/20 {
+  background-color: #f1f5f9;
+}
+
+html.light .bg-slate-850,
+html:not(.dark) .bg-slate-850 {
+  background-color: #f8fafc;
+}
+
+html.light .bg-slate-800,
+html:not(.dark) .bg-slate-800 {
+  background-color: #f1f5f9;
+}
+
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/60,
+html.light .border-slate-700,
+html.light .border-slate-700\/80,
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-800\/60,
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-700\/80 {
+  border-color: #e2e8f0;
+}
+
+/* Text adjustments for light mode */
+html.light h1.text-white,
+html.light h2.text-white,
+html.light h3.text-white,
+html.light h4.text-white,
+html.light p.text-white,
+html.light span.text-white,
+html.light strong.text-white,
+html:not(.dark) h1.text-white,
+html:not(.dark) h2.text-white,
+html:not(.dark) h3.text-white,
+html:not(.dark) h4.text-white,
+html:not(.dark) p.text-white,
+html:not(.dark) span.text-white,
+html:not(.dark) strong.text-white {
+  color: #0f172a;
+}
+
+/* Ensure buttons with solid or gradient background keep white text */
+html.light button.bg-blue-600,
+html.light button.bg-blue-500,
+html.light button[class*="bg-blue-"],
+html.light button.bg-gradient-to-r,
+html.light a.bg-gradient-to-r,
+html:not(.dark) button.bg-blue-600,
+html:not(.dark) button.bg-blue-500,
+html:not(.dark) button[class*="bg-blue-"],
+html:not(.dark) button.bg-gradient-to-r,
+html:not(.dark) a.bg-gradient-to-r {
+  color: #ffffff !important;
+}
+
+html.light button.bg-blue-600 *,
+html.light .bg-blue-600 span,
+html.light .bg-blue-600 p,
+html:not(.dark) button.bg-blue-600 *,
+html:not(.dark) .bg-blue-600 span,
+html:not(.dark) .bg-blue-600 p {
+  color: #ffffff !important;
+}
+
+html.light .text-slate-400,
+html:not(.dark) .text-slate-400 {
+  color: #64748b;
+}
+
+html.light .text-slate-300,
+html:not(.dark) .text-slate-300 {
+  color: #475569;
+}
+
+html.light .text-slate-200,
+html:not(.dark) .text-slate-200 {
+  color: #334155;
+}
+
+/* Form input elements in light mode */
+html.light input,
+html.light textarea,
+html.light select,
+html:not(.dark) input,
+html:not(.dark) textarea,
+html:not(.dark) select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder,
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #94a3b8 !important;
+}
